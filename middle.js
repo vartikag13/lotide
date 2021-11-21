@@ -1,13 +1,3 @@
-const assertArraysEqual = (array1, array2) => {
-  if (eqArrays(array1, array2)) {
-    console.log(`✔ Assertion Passed: both the arrays match!🥳`);
-  } else {
-    console.log(`❌ Assertion Failed: the arrays don't match 😢`);
-  }
-};
-    
-const eqArrays = (a1, a2) => JSON.stringify(a1) === JSON.stringify(a2);
-
 //MIDDLE FUNCTION IMPLEMENTATION
 const middle = (givenArray) => {
   let resultingArray = [];
@@ -26,12 +16,4 @@ const middle = (givenArray) => {
   }
 };
 
-//TEST ASSERTIONS
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2]), []);
-
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+module.exports = middle;
